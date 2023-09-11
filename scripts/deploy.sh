@@ -7,7 +7,7 @@
 #           ./deploy.sh test 1 2 3 4 5 6
 #           ./deploy.sh staging 5 6
 
-
+ 
 set -e # stop the script if any subprocess fails
 
 NOCOMPILE=$1

@@ -49,8 +49,18 @@ module.exports = {
     //
     development: {
       host: "127.0.0.1", // Localhost (default: none)
-      port: 8545, // Standard Ethereum port (default: none)
-      network_id: "1597649375983",
+      port: 3601, // Standard Ethereum port (default: none)
+      network_id: "1",
+    },
+    tenderly: {
+      provider: () => new AWSWalletProvider(
+        "https://rpc.vnet.tenderly.co/devnet/yemo/e6a20d9a-c003-414c-b9d5-be54fbc65192",
+        "argent-smartcontracts-dev",
+        "backend/deploy.key"
+      ), // Localhost (default: none)
+      network_id: "1",
+      gas: 4700000,
+      gasPrice: 20000000000
     },
 
     private: {
@@ -112,7 +122,6 @@ module.exports = {
       gas: _gasLimit,
       gasPrice: _gasPrice,
     },
-
     prodFork: {
       host: "localhost",
       port: 3601,
